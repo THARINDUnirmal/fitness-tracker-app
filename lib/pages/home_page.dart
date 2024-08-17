@@ -1,3 +1,4 @@
+import 'package:fitness_traker_app/widgets/dash_bord.dart';
 import 'package:fitness_traker_app/widgets/side_menu.dart';
 import 'package:flutter/material.dart';
 
@@ -22,13 +23,7 @@ class HomePage extends StatelessWidget {
           Expanded(
             flex: 7,
             child: SizedBox(
-              child: Text(
-                "data 2",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                ),
-              ),
+              child: DashBord(),
             ),
           ),
 
