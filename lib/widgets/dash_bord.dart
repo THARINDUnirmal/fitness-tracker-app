@@ -1,4 +1,4 @@
-import 'package:fitness_traker_app/constants/colors.dart';
+import 'package:fitness_traker_app/widgets/dashbord_header.dart';
 import 'package:flutter/material.dart';
 
 class DashBord extends StatefulWidget {
@@ -14,17 +14,7 @@ class _DashBordState extends State<DashBord> {
     return const SingleChildScrollView(
       child: Column(
         children: [
-          Row(
-            children: [
-              Expanded(
-                child: TextField(
-                  style: TextStyle(
-                    backgroundColor: greyColor,
-                  ),
-                ),
-              ),
-            ],
-          )
+          DashbordHeader(),
         ],
       ),
     );
