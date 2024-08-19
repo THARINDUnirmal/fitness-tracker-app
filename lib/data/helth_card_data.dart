@@ -21,6 +21,6 @@ class HelthCardData {
       cardImageUrl: "assets/icons/sleep.png",
       cardValue: "7h48m",
       cardTitle: "Sleep",
-    )
+    ),
   ];
 }

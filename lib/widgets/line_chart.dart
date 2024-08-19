@@ -24,7 +24,7 @@ class LineChartDesign extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 30,
           ),
           AspectRatio(
             aspectRatio: 16 / 6,

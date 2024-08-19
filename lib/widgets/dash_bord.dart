@@ -73,10 +73,10 @@ class _DashBordState extends State<DashBord> {
                 );
               },
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            LineChartDesign(),
+            const LineChartDesign(),
           ],
         ),
       ),
