@@ -1,4 +1,5 @@
 import 'package:fitness_traker_app/widgets/dash_bord.dart';
+import 'package:fitness_traker_app/widgets/right_menu.dart';
 import 'package:fitness_traker_app/widgets/side_menu.dart';
 import 'package:flutter/material.dart';
 
@@ -31,15 +32,7 @@ class HomePage extends StatelessWidget {
           Expanded(
             flex: 3,
             child: SizedBox(
-              child: Center(
-                child: Text(
-                  "data 3",
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
+              child: RightMenu(),
             ),
           ),
         ],
