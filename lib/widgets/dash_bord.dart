@@ -1,6 +1,7 @@
 import 'package:fitness_traker_app/constants/colors.dart';
 import 'package:fitness_traker_app/constants/constants.dart';
 import 'package:fitness_traker_app/data/helth_card_data.dart';
+import 'package:fitness_traker_app/utils/responsive.dart';
 import 'package:fitness_traker_app/widgets/custom_black_card.dart';
 import 'package:fitness_traker_app/widgets/dashbord_header.dart';
 import 'package:fitness_traker_app/widgets/line_chart.dart';
@@ -17,6 +18,7 @@ class _DashBordState extends State<DashBord> {
   final helthData = HelthCardData();
   @override
   Widget build(BuildContext context) {
+    final bool isMobile = Responsive.isMobile(context);
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(kDefalltPadding),
@@ -28,8 +30,8 @@ class _DashBordState extends State<DashBord> {
             ),
             GridView.builder(
               shrinkWrap: true,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: isMobile ? 2 : 4,
                 crossAxisSpacing: 15,
                 mainAxisSpacing: 15,
               ),

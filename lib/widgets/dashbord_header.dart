@@ -15,7 +15,7 @@ class DashbordHeader extends StatelessWidget {
             onTap: () {
               Scaffold.of(context).openDrawer();
             },
-            child: Padding(
+            child: const Padding(
               padding: EdgeInsets.all(8),
               child: Icon(
                 Icons.menu,
@@ -57,6 +57,24 @@ class DashbordHeader extends StatelessWidget {
             ),
           ),
         ),
+        // profil icon
+        if (!isDextop)
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: InkWell(
+              onTap: () {
+                Scaffold.of(context).openEndDrawer();
+              },
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Image.asset(
+                  "assets/images/avatar.jpg",
+                  width: 40,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          )
       ],
     );
   }

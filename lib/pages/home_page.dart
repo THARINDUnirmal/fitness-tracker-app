@@ -13,8 +13,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       drawer: !isDextop
           ? SizedBox(
-              width: MediaQuery.of(context).size.width * 0.3,
+              width: MediaQuery.of(context).size.width * 0.4,
               child: const SideMenu(),
+            )
+          : null,
+      endDrawer: !isDextop
+          ? SizedBox(
+              width: MediaQuery.of(context).size.width * 0.8,
+              child: const RightMenu(),
             )
           : null,
       body: SafeArea(
