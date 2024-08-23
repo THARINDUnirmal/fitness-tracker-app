@@ -1,7 +1,6 @@
 import 'package:fitness_traker_app/constants/colors.dart';
 import 'package:fitness_traker_app/constants/constants.dart';
 import 'package:fitness_traker_app/data/helth_card_data.dart';
-import 'package:fitness_traker_app/widgets/bar_chart_widget.dart';
 import 'package:fitness_traker_app/widgets/custom_black_card.dart';
 import 'package:fitness_traker_app/widgets/dashbord_header.dart';
 import 'package:fitness_traker_app/widgets/line_chart.dart';
@@ -78,7 +77,7 @@ class _DashBordState extends State<DashBord> {
               height: 20,
             ),
             const LineChartDesign(),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             //BarChartWidget(),
