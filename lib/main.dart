@@ -3,7 +3,7 @@ import 'package:fitness_traker_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: backgroundColor,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }

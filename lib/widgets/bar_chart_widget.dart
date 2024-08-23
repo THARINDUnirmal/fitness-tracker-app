@@ -9,36 +9,34 @@ class BarChartWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final barchartData = BarChartDatas();
-    return Container(
-      child: Column(
-        children: [
-          GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20,
-            ),
-            itemCount: barchartData.chartDatas.length,
-            itemBuilder: (context, index) {
-              return CustomBlackCard(
-                child: Column(
-                  children: [
-                    Text(" chart data"),
-                    AspectRatio(
-                      aspectRatio: 10 / 3,
-                      child: BarChart(
-                        BarChartData(
-                          barTouchData: BarTouchData(enabled: true),
-                        ),
+    return Column(
+      children: [
+        GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            crossAxisSpacing: 20,
+            mainAxisSpacing: 20,
+          ),
+          itemCount: barchartData.chartDatas.length,
+          itemBuilder: (context, index) {
+            return CustomBlackCard(
+              child: Column(
+                children: [
+                  const Text(" chart data"),
+                  AspectRatio(
+                    aspectRatio: 10 / 3,
+                    child: BarChart(
+                      BarChartData(
+                        barTouchData: BarTouchData(enabled: true),
                       ),
                     ),
-                  ],
-                ),
-              );
-            },
-          )
-        ],
-      ),
+                  ),
+                ],
+              ),
+            );
+          },
+        )
+      ],
     );
   }
 }
