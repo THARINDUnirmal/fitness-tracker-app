@@ -1,3 +1,4 @@
+import 'package:fitness_traker_app/utils/responsive.dart';
 import 'package:fitness_traker_app/widgets/dash_bord.dart';
 import 'package:fitness_traker_app/widgets/right_menu.dart';
 import 'package:fitness_traker_app/widgets/side_menu.dart';
@@ -8,20 +9,29 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    final isDextop = Responsive.isDextop(context);
+    return Scaffold(
+      drawer: !isDextop
+          ? SizedBox(
+              width: MediaQuery.of(context).size.width * 0.3,
+              child: const SideMenu(),
+            )
+          : null,
       body: SafeArea(
           child: Row(
         children: [
           //Side Menu
-          Expanded(
-            flex: 2,
-            child: SizedBox(
-              child: SideMenu(),
+
+          if (isDextop)
+            const Expanded(
+              flex: 2,
+              child: SizedBox(
+                child: SideMenu(),
+              ),
             ),
-          ),
 
           // center dashbord
-          Expanded(
+          const Expanded(
             flex: 7,
             child: SizedBox(
               child: DashBord(),
@@ -29,12 +39,13 @@ class HomePage extends StatelessWidget {
           ),
 
           //right dashbord
-          Expanded(
-            flex: 3,
-            child: SizedBox(
-              child: RightMenu(),
+          if (isDextop)
+            const Expanded(
+              flex: 3,
+              child: SizedBox(
+                child: RightMenu(),
+              ),
             ),
-          ),
         ],
       )),
     );

@@ -51,7 +51,7 @@ class ScheduleWidget extends StatelessWidget {
                     ],
                   ),
                   const Icon(
-                    Icons.alarm,
+                    Icons.mark_as_unread,
                     size: 30,
                     color: Colors.white,
                   ),

@@ -1,4 +1,5 @@
 import 'package:fitness_traker_app/constants/colors.dart';
+import 'package:fitness_traker_app/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
 class DashbordHeader extends StatelessWidget {
@@ -6,8 +7,23 @@ class DashbordHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDextop = Responsive.isDextop(context);
     return Row(
       children: [
+        if (!isDextop)
+          GestureDetector(
+            onTap: () {
+              Scaffold.of(context).openDrawer();
+            },
+            child: Padding(
+              padding: EdgeInsets.all(8),
+              child: Icon(
+                Icons.menu,
+                size: 30,
+                color: Colors.white,
+              ),
+            ),
+          ),
         Expanded(
           child: TextField(
             style: const TextStyle(
